@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import bannerImage from "../assets/uov_banner.png";
 import { Text, TextInput, Button } from "react-native-paper";
 import Ionicons from "react-native-vector-icons/Ionicons";
-//import ErrorMessage from "../components/Error";
+import Error from "../components/Error";
 import { useNavigation } from "@react-navigation/native";
 import { students as studentDatabase } from "../assets/Data/StudentsDb.js";
 
@@ -109,7 +109,7 @@ const LoginScreen = () => {
             Login
           </Button>
           {hasError && (
-            <ErrorMessage text="Please check your username and password" />
+            <Error message="Please check your username and password" />
           )}
         </View>
       </View>

@@ -2,7 +2,7 @@ import { Image, ScrollView, StyleSheet, View } from "react-native";
 import bannerImage from "../assets/uov_banner.png";
 import React from "react";
 import { Divider, Text } from "react-native-paper";
-import { studentMarks, studentSubjects } from "../assets/data/StudentsDb";
+import { marks as studentMarks, subjects as studentSubjects } from "../assets/Data/StudentsDb";
 
 const SubjectsScreen = ({ route }) => {
   const { studentDetails } = route.params;
