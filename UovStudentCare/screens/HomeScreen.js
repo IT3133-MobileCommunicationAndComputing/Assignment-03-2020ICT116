@@ -4,12 +4,12 @@ import React from "react";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import ProfileScreen from "./ProfileScreen";
 import CourseOverviewScreen from "./CourseScreen";
-import SubjectListScreen from "./SubjectsScreen";
+//import SubjectListScreen from "./SubjectsScreen";
 
 const TabNavigator = createBottomTabNavigator();
 
 const HomeScreen = ({ route }) => {
-  const { studentDetails } = route.params;
+  const { student } = route.params;
   return (
     <TabNavigator.Navigator
       screenOptions={({ route }) => ({
@@ -43,19 +43,19 @@ const HomeScreen = ({ route }) => {
     >
       <TabNavigator.Screen
         name="StudentProfile"
-        initialParams={{ studentDetails: studentDetails }}
+        initialParams={{ student: student }}
         component={ProfileScreen}
       />
       <TabNavigator.Screen
         name="CourseOverview"
         component={CourseOverviewScreen}
-        initialParams={{ studentDetails: studentDetails }}
+        initialParams={{ studentDetails: student }}
       />
-      <TabNavigator.Screen
+      {/* <TabNavigator.Screen
         name="SubjectList"
         component={SubjectListScreen}
         initialParams={{ studentDetails: studentDetails }}
-      />
+      /> */}
     </TabNavigator.Navigator>
   );
 };

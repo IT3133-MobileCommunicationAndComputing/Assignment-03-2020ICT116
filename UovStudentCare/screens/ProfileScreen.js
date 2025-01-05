@@ -5,7 +5,8 @@ import { Divider, Text } from "react-native-paper";
 
 const ProfileScreen = ({ route }) => {
   const { student } = route.params;
-
+  //const student = studentDetails;
+    console.log(student);
   return (
     <>
       <ScrollView>
