@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import LoginScreen from "./screens/LoginScreen";
-import ProfileScreen from "./screens/ProfileScreen";
+import HomeScreen from "./screens/HomeScreen";
 import { PaperProvider } from "react-native-paper";
 
 const AppNavigator = createNativeStackNavigator();
@@ -29,8 +29,8 @@ export default function App() {
               options={{ title: applicationTitle }}
             />
             <AppNavigator.Screen
-              name="Profile"
-              component={ProfileScreen}
+              name="Home"
+              component={HomeScreen}
               options={{ title: applicationTitle }}
             />
           </AppNavigator.Navigator>
